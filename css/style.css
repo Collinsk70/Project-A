@@ -50,7 +50,7 @@ body {
 }
 
 .heading_container h2 span {
-  color: #00bbf0;
+  color: #231a6f;
 }
 
 .heading_container p {
@@ -136,6 +136,7 @@ a:focus {
 
 .header_section {
   padding: 15px 0;
+  background-color: #231a6f;
 }
 
 .header_section .container-fluid {
@@ -281,12 +282,12 @@ a:focus {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #1d0d30;
 }
 
 .slider_section .detail-box p {
-  color: #fefefe;
-  font-size: 14px;
+  color: #000000;
+  font-size: 20px;
 }
 
 .slider_section .detail-box .btn-box {
@@ -306,7 +307,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn1 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #00bbf0;
+  background-color: #231a6f;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -385,7 +386,7 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #ffffff;
+  background-color: #2aa3f3;
   width: 12px;
   height: 12px;
   border-radius: 100%;
@@ -395,7 +396,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #00bbf0;
+  background-color: #231a6f;
 }
 
 .service_section {
@@ -454,7 +455,7 @@ a:focus {
 }
 
 .service_section .box .detail-box a:hover {
-  color: #00bbf0;
+  color: #231a6f;
 }
 
 .service_section .btn-box {
@@ -470,7 +471,7 @@ a:focus {
 .service_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #00bbf0;
+  background-color: #231a6f;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -587,7 +588,7 @@ a:focus {
 .why_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #00bbf0;
+  background-color: #231a6f;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
