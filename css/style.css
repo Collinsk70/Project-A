@@ -50,7 +50,7 @@ body {
 }
 
 .heading_container h2 span {
-  color: #231a6f;
+  color: #800080;
 }
 
 .heading_container p {
@@ -105,6 +105,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0.3;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -136,7 +137,7 @@ a:focus {
 
 .header_section {
   padding: 15px 0;
-  background-color: #231a6f;
+  background-color: #800080;
 }
 
 .header_section .container-fluid {
@@ -169,7 +170,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #00bbf0;
+  color: #663266;
 }
 
 .custom_nav-container .navbar-nav .nav-item.active .nav-link {
@@ -307,7 +308,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn1 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #231a6f;
+  background-color: #800080;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -316,7 +317,7 @@ a:focus {
 }
 
 .slider_section .detail-box .btn-box .btn1:hover {
-  background-color: #007fa4;
+  background-color: #663266;
 }
 
 .slider_section .detail-box .btn-box .btn2 {
@@ -386,7 +387,7 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #2aa3f3;
+  background-color: #663266;
   width: 12px;
   height: 12px;
   border-radius: 100%;
@@ -396,7 +397,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #231a6f;
+  background-color: #800080;
 }
 
 .service_section {
@@ -471,7 +472,7 @@ a:focus {
 .service_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #231a6f;
+  background-color: #800080;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -480,11 +481,11 @@ a:focus {
 }
 
 .service_section .btn-box a:hover {
-  background-color: #007fa4;
+  background-color: #663266;
 }
 
 .about_section {
-  background-color: #00204a;
+  background-color: #800080;
   color: #ffffff;
 }
 
@@ -513,7 +514,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #00bbf0;
+  background-color: #280a5f;
   color: #ffffff;
   border-radius: 0px;
   -webkit-transition: all 0.3s;
@@ -523,7 +524,7 @@ a:focus {
 }
 
 .about_section .detail-box a:hover {
-  background-color: #007fa4;
+  background-color: #663266;
 }
 
 .why_section .box {
@@ -548,7 +549,7 @@ a:focus {
   min-width: 120px;
   min-height: 120px;
   border-radius: 100%;
-  border: 5px solid #00204a;
+  border: 5px solid #800080;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,7 +564,7 @@ a:focus {
 .why_section .box .img-box img {
   width: 55px;
   height: auto;
-  fill: #00204a;
+  fill: #800080;
 }
 
 .why_section .box h5 {
@@ -588,7 +589,7 @@ a:focus {
 .why_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #231a6f;
+  background-color: #800080;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -597,13 +598,13 @@ a:focus {
 }
 
 .why_section .btn-box a:hover {
-  background-color: #007fa4;
+  background-color: #663266;
 }
 
 /*team section */
 .team_section {
   text-align: center;
-  background-color: #00204a;
+  background-color: #663266;
   color: #ffffff;
 }
 
@@ -624,8 +625,8 @@ a:focus {
   -webkit-transition: all .1s;
   transition: all .1s;
   margin-top: 45px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
-  background: linear-gradient(to bottom, #002759, #002b64);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9A32CD), to(#800080));
+  background: linear-gradient(to bottom, #9A32CD, #800080);    
 }
 
 .team_section .team_container .box .img-box {
@@ -651,7 +652,7 @@ a:focus {
 }
 
 .team_section .team_container .box .detail-box h5 {
-  color: #00bbf0;
+  color: #090c0e;
   font-weight: 600;
   position: relative;
 }
@@ -672,7 +673,7 @@ a:focus {
 }
 
 .team_section .team_container .box .social_box a:hover {
-  color: #00bbf0;
+  color: #0b0e0f;
 }
 
 /*team section end*/
@@ -776,7 +777,7 @@ a:focus {
 
 /* client section end */
 .info_section {
-  background-color: #00204a;
+  background-color: #800080;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
@@ -810,7 +811,7 @@ a:focus {
 }
 
 .info_section .info_contact .contact_link_box a:hover {
-  color: #00bbf0;
+  color: #0e1213;
 }
 
 .info_section .info_social {
@@ -838,7 +839,7 @@ a:focus {
 }
 
 .info_section .info_social a:hover {
-  color: #00bbf0;
+  color: #0c1113;
 }
 
 .info_section .info_links {
@@ -865,7 +866,7 @@ a:focus {
 }
 
 .info_section .info_links a:hover {
-  color: #00bbf0;
+  color: #080a0a;
 }
 
 .info_section form input {
@@ -899,7 +900,7 @@ a:focus {
   text-align: center;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #00bbf0;
+  background-color: #0c1011;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -909,7 +910,7 @@ a:focus {
 }
 
 .info_section form button:hover {
-  background-color: #007fa4;
+  background-color: #663266;
 }
 
 /* footer section*/
