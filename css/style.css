@@ -526,6 +526,26 @@ a:focus {
 .about_section .detail-box a:hover {
   background-color: #663266;
 }
+/* About Section Styles - Adjusted */
+.about_section_1 .detail-box a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white; /* Adjusted font color for better readability */
+  background-color: #800080; /* Changed background to green */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif; /* Adjusted font */
+  transition: background-color 0.3s ease;
+}
+
+.about_section_1 .detail-box a:hover {
+  background-color: #663266; /* Darker green for hover effect */
+}
+.about_section_1 img{
+  padding-top: 40px;
+}
 
 .why_section .box {
   margin-top: 45px;
@@ -677,6 +697,170 @@ a:focus {
 }
 
 /*team section end*/
+/*team section */
+.team_section_1 {
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.team_section_1 .heading_container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team_section_1 .team_container {
+  padding: 0 15px;
+}
+
+.team_section_1 .team_container .box {
+  padding: 35px 0 0 0;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  margin-top: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9A32CD), to(#800080));
+  background: linear-gradient(to bottom, #9A32CD, #800080);    
+}
+
+.team_section_1 .team_container .box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team_section_1 .team_container .box .img-box img {
+  width: 120px;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+
+.team_section_1 .team_container .box .detail-box {
+  margin: 25px 0;
+}
+
+.team_section_1 .team_container .box .detail-box h5 {
+  color: #090c0e;
+  font-weight: 600;
+  position: relative;
+}
+
+.team_section_1 .team_container .box .social_box {
+  padding: 10px 45px 20px 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team_section_1 .team_container .box .social_box a {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.team_section_1 .team_container .box .social_box a:hover {
+  color: #0b0e0f;
+}
+/* Contact Form Styles */
+.contact-form {
+  background-color: #f9f9f9; /* Light background for form section */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Center the form */
+  max-width: 500px; /* Limit the form's width */
+  margin: 20px auto; /* Center the form horizontally and add spacing */
+  text-align: center; /* Center-align the content inside the form */
+  font-family: 'Roboto', sans-serif; /* Add elegant font */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 15px; /* Add spacing for smaller viewports */
+  }
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; /* Add elegant font to input fields */
+  color: #333;
+}
+
+.contact-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form textarea.form-control {
+  resize: none;
+}
+
+.contact-form .btn {
+  background-color: #800080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; /* Consistent font for buttons */
+  font-weight: 500; /* Slightly bold for emphasis */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: #663266;
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* Responsive font adjustments */
+@media (max-width: 768px) {
+  .contact-form h3 {
+    font-size: 20px;
+  }
+}
+
+/* Google Map Styles */
+.google-map {
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.google-map iframe {
+  border: none;
+}
+
+
+
 /* client section start */
 .client_section .heading_container {
   margin-bottom: 30px;

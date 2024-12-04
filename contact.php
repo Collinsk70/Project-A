@@ -1,3 +1,31 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate inputs
+    $name = htmlspecialchars(strip_tags($_POST['name']));
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars(strip_tags($_POST['message']));
+
+    // Set email details
+    $to = "collinskarweru@gmail.com";
+    $subject = "New Contact Form Submission";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8";
+
+    // Email body
+    $body = "You have received a new message from the contact form:\n\n";
+    $body .= "Name: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Message:\n$message\n";
+
+    // Send email
+    if (mail($to, $subject, $body, $headers)) {
+        $success = "Message sent successfully!";
+    } else {
+        $error = "Message could not be sent. Please try again later.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -65,16 +93,16 @@
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
+                <a class="nav-link" href="service.html">Services </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="why.html">Why Us</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="team.html">Team <span class="sr-only">(current)</span> </a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact Us</a>
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
@@ -92,154 +120,47 @@
     <!-- end header section -->
   </div>
 
-  <!-- team section -->
-  <section class="team_section_1 layout_padding">
-    <div class="container-fluid">
-      <div class="heading_container heading_center">
-        <h2 class="">
-          Our <span> Team</span>
-        </h2>
-      </div>
+<!-- Contact Form -->
+        
+<!-- Contact Form Section -->
+<section class="contact_section">
+    <div class="container">
+      <h3>Contact Us</h3>
+      <?php if (isset($success)) : ?>
+        <div class="alert alert-success"><?php echo $success; ?></div>
+      <?php elseif (isset($error)) : ?>
+        <div class="alert alert-danger"><?php echo $error; ?></div>
+      <?php endif; ?>
 
-      <div class="team_container">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-1.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Joseph Brown
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-2.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Nancy White
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-3.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Earl Martinez
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-4.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Josephine Allard
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
+      <form action="" method="post" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+  
+        <!-- Google Map (Optional) -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31700.287038835756!2d36.8052572!3d-1.2610634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17d68f481553%3A0xffa0b7cd9cdb4fc8!2sWestlands%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1696363769012!5m2!1sen!2s" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- end team section -->
+     
+    </section>
+    <!-- End Contact Section -->
 
-  <!-- info section -->
+   <!-- info section -->
 
-  <section class="info_section layout_padding2">
+   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 info_col">
@@ -316,6 +237,9 @@
               <a class="" href="team.html">
                 Team
               </a>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
             </div>
           </div>
         </div>
