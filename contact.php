@@ -1,79 +1,34 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate inputs
-    $name = htmlspecialchars(strip_tags($_POST['name']));
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars(strip_tags($_POST['message']));
-
-    // Set email details
-    $to = "collinskarweru@gmail.com";
-    $subject = "New Contact Form Submission";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8";
-
-    // Email body
-    $body = "You have received a new message from the contact form:\n\n";
-    $body .= "Name: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Message:\n$message\n";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        $success = "Message sent successfully!";
-    } else {
-        $error = "Message could not be sent. Please try again later.";
-    }
-}
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <!-- Basic -->
+  <!-- Basic Metadata -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <title>Finexo</title>
 
-  <title> Finexo </title>
-
-  <!-- bootstrap core css -->
+  <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+ 
 </head>
 
 <body class="sub_page">
-
   <div class="hero_area">
-
     <div class="hero_bg_box">
       <div class="bg_img_box">
         <img src="images/hero-bg.png" alt="">
       </div>
     </div>
 
-    <!-- header section strats -->
-    <header class="header_section">
+   <!-- header section strats -->
+   <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
@@ -93,16 +48,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="service.html">Services </a>
+                <a class="nav-link" href="service.html">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="why.html">Why Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
+                <a class="nav-link" href="team.html">Team  </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="contact.php">Contact Us <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
@@ -120,33 +75,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- end header section -->
   </div>
 
-<!-- Contact Form -->
-        
 <!-- Contact Form Section -->
 <section class="contact_section">
-    <div class="container">
-      <h3>Contact Us</h3>
-      <?php if (isset($success)) : ?>
-        <div class="alert alert-success"><?php echo $success; ?></div>
-      <?php elseif (isset($error)) : ?>
-        <div class="alert alert-danger"><?php echo $error; ?></div>
-      <?php endif; ?>
+  <div class="container">
+    <div id="form-message" class="alert d-none"></div>
+    <form id="contact-form" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
 
-      <form action="" method="post" class="contact-form">
-        <div class="form-group">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </div>
-      </form>
-    </div>
+<!-- JavaScript -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+  // Initialize EmailJS
+  emailjs.init("pKEzjOf8Z7OUi8dLN"); // Replace with your EmailJS public key
+
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    // Collect form data
+    const formData = {
+      to_name: "Collins Karweru", // Recipient name from your template
+      from_name: form.name.value, // Sender's name
+      message: form.message.value, // Message content
+      reply_to: form.email.value, // Reply email address
+    };
+
+    // Send email using EmailJS
+    emailjs.send("service_ho4tkto", "template_prld9dl", formData)
+      .then(function (response) {
+        showAlert("Message sent successfully!", "success");
+      })
+      .catch(function (error) {
+        console.log(error);
+        showAlert("Message could not be sent. Please try again later.", "danger");
+      });
+
+    // Clear the form
+    form.reset();
+  });
+
+  // Show success or error messages
+  function showAlert(message, type) {
+    const alertDiv = document.getElementById("form-message");
+    alertDiv.className = `alert alert-${type}`;
+    alertDiv.textContent = message;
+    alertDiv.classList.remove("d-none");
+  }
+</script>
+
   
         <!-- Google Map (Optional) -->
         <div class="row mt-5">
