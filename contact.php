@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Finexo</title>
+  <title>Linko</title>
 
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -205,8 +205,8 @@
               Info
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-            </p>
+            We pride ourselves on connecting businesses with world-class data expertise, delivering tailored solutions that transform complex challenges into actionable insights.  
+                      </p>
           </div>
         </div>
         <div class="col-md-6 col-lg-2 mx-auto info_col">
@@ -230,9 +230,7 @@
               <a class="" href="team.html">
                 Team
               </a>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
+
             </div>
           </div>
         </div>
