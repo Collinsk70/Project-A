@@ -64,7 +64,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo1.png" alt="Company Logo" style="height: 70px; width: auto;"><span></span><!-- Logo added here -->
+            <img src="images/logo1.png" alt="Company Logo" style="height: 100px; width: auto;"><span></span><!-- Logo added here -->
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,18 +106,75 @@
     </header>
     <!-- end header section -->
     <!-- video background section -->
-<section class="video_section">
-  
-  <div class="overlay-content">
-    <div class="text-box">
-      <h1 class="animated-text">Unlock <br> The Power of Data</h1>
-      <p class="animated-text">
-        Gain unparalleled access to a global network of data experts dedicated to turning your data into strategic advantage. 
-        With Linko, insights are just the beginning—your growth is the goal.
-      </p>
-    </div>
-  </div>
-</section>
+    <section class="video_section">
+      <!-- Background Video -->
+      <video class="background-video" autoplay muted loop>
+        <source src="videos/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    
+      <!-- Overlay Content -->
+      <div class="overlay-content">
+        <div class="text-box" id="slider">
+          <h1 class="animated-text">Unlock <br> The Power of Data</h1>
+          <p class="animated-text">
+            Gain unparalleled access to a global network of data experts dedicated to turning your data into strategic advantage. 
+            With Linko, insights are just the beginning—your growth is the goal.
+          </p>
+        </div>
+      </div>
+    </section>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const messages = [
+    {
+      title: "Unlock The Power of Data",
+      text: "Gain unparalleled access to a global network of seasoned data experts dedicated to transforming your raw data into actionable insights and a formidable strategic advantage. At Linko, we don't just analyze data—we unlock its full potential to drive innovation, optimize operations, and fuel your success.",
+    },
+    {
+      title: "Seamless Insights, Seamless Growth",
+      text: "Transform how you perceive and leverage data with tools meticulously designed for precision, clarity, and actionable results. Linko empowers you to turn complex datasets into meaningful narratives that inform your strategies and inspire confident decision-making.",
+    },
+    {
+      title: "Achieve More with Linko",
+      text: "Empower your business with next-generation data strategies that redefine success and open doors to unprecedented growth opportunities. From predictive analytics to customized solutions tailored to your industry, Linko equips you with the tools and insights to stay ahead in a competitive landscape.",
+    },
+  ];
+
+  const slider = document.getElementById("slider");
+  let index = 0;
+
+  function updateSlider() {
+    const { title, text } = messages[index];
+    slider.innerHTML = `
+      <h1 class="animated-title">${title}</h1>
+      <p class="animated-paragraph">${text}</p>
+    `;
+
+    // Reset animation
+    const titleEl = slider.querySelector(".animated-title");
+    const paragraphEl = slider.querySelector(".animated-paragraph");
+
+    titleEl.style.opacity = "0";
+    titleEl.style.animation = "none";
+    void titleEl.offsetWidth; // Trigger reflow
+    titleEl.style.animation = "slideInTop 2s ease-in-out forwards";
+
+    paragraphEl.style.opacity = "0";
+    paragraphEl.style.animation = "none";
+    void paragraphEl.offsetWidth; // Trigger reflow
+    paragraphEl.style.animation = "slideInBottom 2s ease-in-out forwards";
+
+    // Update index
+    index = (index + 1) % messages.length;
+  }
+
+  // Initialize slider and start loop
+  updateSlider();
+  setInterval(updateSlider, 10000); // Change every 5 seconds
+});
+
+ </script>    
 
 
   </div>
