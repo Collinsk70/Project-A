@@ -105,7 +105,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0.3;
+  opacity: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -138,6 +138,7 @@ a:focus {
 .header_section {
   padding: 15px 0;
   background-color: #800080;
+  background-color: rgba(128, 0, 128, 0);
 }
 
 .header_section .container-fluid {
