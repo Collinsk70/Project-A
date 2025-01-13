@@ -137,8 +137,19 @@ a:focus {
 
 .header_section {
   padding: 15px 0;
-  background-color: #800080;
-  background-color: rgba(128, 0, 128, 0);
+  background-color: rgba(128, 0, 128, 0); /* Initial transparent background */
+  position: fixed; /* Make header fixed */
+  width: 100%; /* Ensure it spans the full width */
+  top: 0;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease; /* Smooth transition */
+  transition: all 0.5s ease;
+}
+
+.header_section.scrolled {
+  background-color: rgba(128, 0, 128, 1); /* Opaque background on scroll */
+  padding: 0; /* Minimal padding */
+  transform: translateY(-20px); /* Moves the element 10px up */
 }
 
 .header_section .container-fluid {
