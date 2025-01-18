@@ -110,49 +110,147 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
+ <!-- about section -->
+<style>
+  .about_section_1 {
+    padding: 60px 15px;
+    background-color: #f9f9f9;
+  }
+
+  .about_section_1 .heading_container {
+    margin-bottom: 40px;
+  }
+
+  .about_section_1 h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .about_section_1 h2 span {
+    color: #800080;
+  }
+
+  .about_section_1 p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  .about_section_1 .img-box video {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about_section_1 .img-box video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Adjust only the first video */
+  .about_section_1 .img-box.first-video {
+    margin-top: 50px; /* Adjust this value to move the video lower */
+  }
+
+  .about_section_1 .detail-box h3,
+  .about_section_1 .detail-box h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .about_section_1 .detail-box p {
+    margin-bottom: 15px;
+  }
+
+  .about_section_1 .row {
+    margin-bottom: 40px;
+  }
+</style>
+
 </br>
 </br>
-  <section class="about_section_1 layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          About <span>Linko</span>
-        </h2>
-        <p>
-          Unlocking the power of data to drive informed decisions and sustainable growth for businesses worldwide.         </p>
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <video controls loop autoplay muted width="100%">
-              <source src="images/About2.mov">
-              Your browser does not support the video tag.
+<section class="about_section_1 layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        About <span>Linko</span>
+      </h2>
+      <p>
+        Unlocking the power of data to drive informed decisions and sustainable growth for businesses worldwide.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Added first-video class to this div -->
+        <div class="img-box first-video">
+          <video loop autoplay muted width="100%">
+            <source src="images/About2.mov">
+            Your browser does not support the video tag.
           </video>
-          </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              We Are Linko
-            </h3>
-            <p>
-              At Linkno, we bridge the gap between businesses and a global network of skilled data professionals. Our mission is to empower organizations by offering seamless access to expert talent in data analysis, research, and organization. Whether it's uncovering actionable insights, conducting in-depth research, or streamlining data processes, we are dedicated to helping you achieve your business goals with precision and confidence. We believe that every business has untapped potential within its data. By integrating cutting-edge technology and innovative methodologies, we craft custom solutions that address your unique challenges. With a commitment to quality, accuracy, and client satisfaction, Linkno.AI is your trusted partner for turning data into opportunity. 
-            </p>
-            <p>
-              Redefining the way businesses leverage data, we are passionate about delivering excellence in every project. Join us as we pave the way for smarter, data-driven decisions that inspire growth and innovation.             </p>
-           <!-- <a href="">
-              Read More
-            </a>-->
-          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h3>
+            We Are Linko
+          </h3>
+          <p>
+            Linko Outsourcing is a pioneering company dedicated to advancing the fields of Artificial
+            Intelligence (AI) and Machine Learning (ML) through ethical outsourcing solutions. We
+            specialize in providing customized AI and ML services that empower businesses to streamline
+            operations, enhance decision-making, and drive sustainable growth.
+          </p>
+          <p>
+            Our team of highly skilled professionals brings together deep technical expertise and a
+            commitment to transparency, ensuring that each project we handle is executed with precision,
+            efficiency, and integrity.
+          </p>
+          <p>
+            We offer a range of services including AI development, data processing, automation, predictive
+            analytics, and AI consultation. By collaborating with us, companies can harness the power of AI
+            and ML to transform their operations while adhering to ethical standards.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h4>Our Mission</h4>
+          <p>
+            To help businesses accelerate their AI and ML journey through ethical
+            outsourcing solutions, ensuring transparency, quality, and innovation at every step.
+          </p>
+          <h4>Our Vision</h4>
+          <p>
+            To be the trusted global partner for businesses seeking to leverage AI and ML
+            technologies ethically and sustainably for future success.
+          </p>
+          <p>
+            At Linko Outsourcing, we are more than just a service provider—we are your partners in
+            innovation and growth. Let us help you unlock the potential of AI and ML to achieve your
+            business development goals with precision and excellence.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-box">
+          <video loop autoplay muted width="100%">
+            <source src="images/Vid2.mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about section -->
 
-  <!-- end about section -->
 
   <!-- info section -->
 
