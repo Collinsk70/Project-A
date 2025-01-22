@@ -678,8 +678,6 @@ a:focus {
 }
 
 
-
-
 .why_section .box {
   margin-top: 45px;
   display: -webkit-box;
@@ -1095,13 +1093,14 @@ a:focus {
 /* client section end */
 .info_section {
   background-color: #800080;
-  color: #ffffff;
+  color: black;
   padding: 45px 0 15px 0;
 }
 
 .info_section h4 {
-  font-weight: 600;
+  font-weight: 1000;
   margin-bottom: 20px;
+  color: black;
 }
 
 .info_section .info_col {
@@ -1120,7 +1119,7 @@ a:focus {
 
 .info_section .info_contact .contact_link_box a {
   margin: 5px 0;
-  color: #ffffff;
+  color: black;
 }
 
 .info_section .info_contact .contact_link_box a i {
@@ -1128,7 +1127,7 @@ a:focus {
 }
 
 .info_section .info_contact .contact_link_box a:hover {
-  color: #0e1213;
+  color: white;
 }
 
 .info_section .info_social {
@@ -1149,14 +1148,14 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: black;
   border-radius: 100%;
   margin-right: 10px;
   font-size: 24px;
 }
 
 .info_section .info_social a:hover {
-  color: #0c1113;
+  color: white;
 }
 
 .info_section .info_links {
@@ -1179,11 +1178,11 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: black;
 }
 
 .info_section .info_links a:hover {
-  color: #080a0a;
+  color: white;
 }
 
 .info_section form input {
