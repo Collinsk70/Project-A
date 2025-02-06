@@ -271,45 +271,160 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- end service section -->
 
 
-  <!-- about section -->
+<!-- About Section -->
+<section class="about_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>About Us</h2>
+    </div>
 
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          About <span>Us</span>
-        </h2>
-        <p>
-          Unlocking the power of data to drive informed decisions and sustainable growth for businesses worldwide.        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <video src="images/Vid2.mp4" autoplay loop muted style="border-radius: 5%; width: 100%; height: auto;"></video>
-          </div>
+    <div class="row align-items-center">
+      <!-- Top Left Content -->
+      <div class="col-md-6 fade-in">
+        <div class="content-box">
+          <h3>We Are Linko</h3>
+          <p>
+            At Linko, we bridge the gap between businesses and a global network of skilled data professionals. Our mission is to empower organizations by offering seamless access to expert talent in data analysis, research, and organization.
+          </p>
+          <p>
+            We understand that data-driven decisions are the backbone of modern businesses. Our team ensures that companies can harness the full potential of their data through accurate insights and strategic planning.
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              We Are Linko
-            </h3>
-            <p>
-              At Linko, we bridge the gap between businesses and a global network of skilled data professionals. Our mission is to empower organizations by offering seamless access to expert talent in data analysis, research, and organization. Whether it's uncovering actionable insights, conducting in-depth research, or streamlining data processes, we are dedicated to helping you achieve your business goals with precision and confidence.
-              We believe that every business has untapped potential within its data. By integrating cutting-edge technology and innovative methodologies, we craft custom solutions that address your unique challenges. With a commitment to quality, accuracy, and client satisfaction, Linko is your trusted partner for turning data into opportunity.
-            </p>
-            <p>
-              Redefining the way businesses leverage data, we are passionate about delivering excellence in every project. Join us as we pave the way for smarter, data-driven decisions that inspire growth and innovation.
-            </p>
-          <a href="about.html" style="background-color: white; color: black;">
-              Read More
-            </a>
+      </div>
+
+      <!-- Top Right Video -->
+      <div class="col-md-6 fade-in">
+        <div class="img-box">
+          <video src="images/Vid2.mp4" autoplay loop muted></video>
+        </div>
+      </div>
+
+      <!-- Bottom Left Video -->
+      <div class="col-md-6 fade-in">
+        <div class="img-box">
+          <video src="images/About2.mov" autoplay loop muted></video>
+        </div>
+      </div>
+
+      <!-- Bottom Right Content -->
+      <div class="col-md-6 fade-in">
+        <div class="content-box">
+          <p>
+            By integrating cutting-edge technology and innovative methodologies, we craft custom solutions that address unique challenges. Our experts specialize in transforming complex datasets into valuable business intelligence.
+          </p>
+          <p>
+            Whether you are looking to streamline operations, improve efficiency, or scale your business, Linko provides the expertise needed to make data a key driver of success.
+          </p>
+          <div class="learn-more">
+            <a href="about.html" class="btn btn-dark">Learn More</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- End About Section -->
 
-  <!-- end about section -->
+<!-- CSS -->
+<style>
+/* About Section */
+.about_section {
+  background-color: #800080;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.about_section .heading_container {
+  margin-bottom: 45px;
+}
+
+/* Spacing for Better Layout */
+.row {
+  gap: 40px 0; /* Adds vertical spacing */
+}
+
+/* Content Box (White Bordered) */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+  padding: 30px;
+  margin: 20px 0;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.content-box h3 {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.content-box p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Learn More Button */
+.learn-more {
+  margin-top: 15px;
+}
+
+.learn-more a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: white;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more a:hover {
+  background-color: #663266;
+}
+
+/* Video Styling */
+.img-box video {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<!-- JavaScript for Smooth Scroll Animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll(".fade-in");
+
+  function checkVisibility() {
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Trigger on page load
+});
+</script>
+
 
   <!-- why section -->
 
