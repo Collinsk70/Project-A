@@ -273,138 +273,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- About Section -->
 <section class="about_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
+  <!-- Left Side: Rotated Video -->
+  <div class="video-container">
+    <video src="images/About2.mov" autoplay loop muted></video>
+  </div>
+
+  <!-- Right Side: Content -->
+  <div class="content-container">
+    <div class="text-content">
       <h2>About Us</h2>
-    </div>
-
-    <div class="row align-items-center">
-      <!-- Top Left Content -->
-      <div class="col-md-6 fade-in">
-        <div class="content-box">
-          <h3>We Are Linko</h3>
-          <p>
-            At Linko, we bridge the gap between businesses and a global network of skilled data professionals. Our mission is to empower organizations by offering seamless access to expert talent in data analysis, research, and organization.
-          </p>
-          <p>
-            We understand that data-driven decisions are the backbone of modern businesses. Our team ensures that companies can harness the full potential of their data through accurate insights and strategic planning.
-          </p>
-        </div>
-      </div>
-
-      <!-- Top Right Video -->
-      <div class="col-md-6 fade-in">
-        <div class="img-box">
-          <video src="images/Vid2.mp4" autoplay loop muted></video>
-        </div>
-      </div>
-
-      <!-- Bottom Left Video -->
-      <div class="col-md-6 fade-in">
-        <div class="img-box">
-          <video src="images/About2.mov" autoplay loop muted></video>
-        </div>
-      </div>
-
-      <!-- Bottom Right Content -->
-      <div class="col-md-6 fade-in">
-        <div class="content-box">
-          <p>
-            By integrating cutting-edge technology and innovative methodologies, we craft custom solutions that address unique challenges. Our experts specialize in transforming complex datasets into valuable business intelligence.
-          </p>
-          <p>
-            Whether you are looking to streamline operations, improve efficiency, or scale your business, Linko provides the expertise needed to make data a key driver of success.
-          </p>
-          <div class="learn-more">
-            <a href="about.html" class="btn btn-dark">Learn More</a>
-          </div>
-        </div>
+      <p>
+        At Linko, we connect businesses with a global network of highly skilled data professionals. Our mission is to provide seamless access to expertise in data analysis, research, and strategic decision-making.
+      </p>
+      <p>
+        In today’s data-driven world, organizations thrive on insights derived from accurate and well-structured data. Our team ensures that companies harness the full potential of their data, empowering them to make informed business decisions with confidence.
+      </p>
+      <p>
+        By integrating cutting-edge technology and innovative methodologies, we craft tailored solutions that address unique business challenges. Our experts specialize in transforming raw data into actionable intelligence, enhancing operational efficiency and driving sustainable growth.
+      </p>
+      <p>
+        Whether you're looking to optimize processes, boost productivity, or scale your operations, Linko provides the expertise and technology needed to turn data into a powerful asset.
+      </p>
+      <div class="learn-more">
+        <a href="about.html" class="btn btn-light">Learn More</a>
       </div>
     </div>
   </div>
 </section>
-<!-- End About Section -->
 
-<!-- CSS -->
+<!-- Updated CSS -->
 <style>
 /* About Section */
 .about_section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.video-container {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: rotate(90deg);
+  position: absolute;
+  left: -28vw;
+  opacity: 0.8;
+}
+
+.content-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
   background-color: #800080;
-  color: #ffffff;
-  padding: 80px 0;
+  color: white;
 }
 
-.about_section .heading_container {
-  margin-bottom: 45px;
-}
-
-/* Spacing for Better Layout */
-.row {
-  gap: 40px 0; /* Adds vertical spacing */
-}
-
-/* Content Box (White Bordered) */
-.content-box {
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparent white */
-  padding: 30px;
-  margin: 20px 0;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  color: #ffffff;
-  text-align: left;
-}
-
-.content-box h3 {
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
   font-weight: bold;
-  font-size: 24px;
-  text-align: center;
 }
 
-.content-box p {
-  margin-top: 10px;
-  font-size: 16px;
-  line-height: 1.5;
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-/* Learn More Button */
 .learn-more {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
-.learn-more a {
+.btn-light {
   display: inline-block;
-  padding: 10px 30px;
   background-color: white;
-  color: #000;
-  border-radius: 4px;
+  color: #800080;
+  padding: 10px 20px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-.learn-more a:hover {
-  background-color: #663266;
-}
-
-/* Video Styling */
-.img-box video {
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  margin: 20px 0;
-}
-
-/* Fade-in Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.btn-light:hover {
+  background-color: #f5f5f5;
 }
 </style>
+
 
 <!-- JavaScript for Smooth Scroll Animation -->
 <script>
