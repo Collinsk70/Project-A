@@ -1103,10 +1103,18 @@ a:focus {
   width: 100%;
 }
 
+.info_section .row {
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
 /* Columns */
 .info_col {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 20px; /* Reduced margin */
 }
 
 .info_col h4 {
@@ -1194,17 +1202,39 @@ a:focus {
     transform: scale(0.8);
   }
 }
+/* Ensure logo stays far left and other columns are pushed */
+.logo_col {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto; /* Pushes everything else away */
+  padding-top: 90px;
+}
+.info_section .row {
+  display: flex; /* Add this if it's missing */
+  justify-content: center; /* Ensures center alignment of the columns after logo */
+  gap: 20px; /* Optional: adds space between columns */
+}
+/* Apply spacing only to columns after the logo */
+.info_section .info_col:not(.logo_col) {
+  margin-left: 10px;
+}
 
 .logo {
   position: relative;
-  display: inline-block;
+  display: flex; /* change from inline-block */
+  justify-content: flex-start; /* align logo left */
+  align-items: flex-start;
+  width: 100%; /* span full width of column */
+  padding-left: 0; /* remove any unintended padding */
 }
 
 .logo_img {
   height: 120px;
   width: auto;
   animation: bounce 1.5s infinite ease-in-out;
+
 }
+
 
 /* Shadow Effect */
 .logo::after {
