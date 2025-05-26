@@ -470,92 +470,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- end why section -->
 
- <!-- team section -->
-<section class="team_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2 class="">
-        Our Team
-      </h2>
-    </div>
 
-    <div class="team_container">
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/team-1.jpg" class="img1" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Joseph Brown
-              </h5>
-              <p>
-                Marketing Head
-              </p>
-            </div>
-            <div class="social_box">
-              <a href="#">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/team-4.jpg" class="img1" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Josephine Allard
-              </h5>
-              <p>
-                Marketing Head
-              </p>
-            </div>
-            <div class="social_box">
-              <a href="#">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end team section -->
-
-
-
-  <!-- client section -->
-
+  <!-- client section 
   <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center psudo_white_primary mb_45">
@@ -654,8 +570,292 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </section>
 
-  <!-- end client section -->
+  end client section -->
 
+<!-- Our Impact in Numbers Section -->
+<section id="impact" class="impact-section">
+  <div class="impact-container">
+    <!-- Left Image Column -->
+    <div class="impact-image">
+      <img src="images/Data-annotation-featured-image-1.png" alt="Impact Visual" />
+    </div>
+
+    <!-- Right Content Column -->
+    <div class="impact-content">
+      <h2 class="section-title">Our Impact in Numbers</h2>
+      <div class="impact-counters">
+        <div class="counter" data-percent="98">
+          <svg class="progress-circle" width="140" height="140">
+            <circle class="bg" cx="70" cy="70" r="60" />
+            <circle class="progress" cx="70" cy="70" r="60" />
+          </svg>
+          <div class="counter-text">
+            <span class="number">0%</span>
+            <p>Satisfaction</p>
+          </div>
+        </div>
+
+        <div class="counter" data-percent="120">
+          <svg class="progress-circle" width="140" height="140">
+            <circle class="bg" cx="70" cy="70" r="60" />
+            <circle class="progress" cx="70" cy="70" r="60" />
+          </svg>
+          <div class="counter-text">
+            <span class="number">0+</span>
+            <p>Projects Done</p>
+          </div>
+        </div>
+
+        <div class="counter" data-percent="25">
+          <svg class="progress-circle" width="140" height="140">
+            <circle class="bg" cx="70" cy="70" r="60" />
+            <circle class="progress" cx="70" cy="70" r="60" />
+          </svg>
+          <div class="counter-text">
+            <span class="number">0+</span>
+            <p>Sectors Served</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+ <style>
+.impact-section {
+  padding: 0;
+  background: #800080;
+  color: white;
+}
+
+.impact-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.impact-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.impact-content {
+  flex: 1;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.impact-counters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.counter {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+circle.bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 12;
+}
+
+circle.progress {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.counter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.counter-text p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .impact-container {
+    flex-direction: column;
+  }
+
+  .impact-image {
+    height: 250px;
+  }
+
+  .impact-content {
+    padding: 40px 20px;
+  }
+}
+
+</style>
+
+<!-- JavaScript -->
+<script>
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    const value = parseInt(counter.getAttribute('data-percent'), 10);
+    const progressCircle = counter.querySelector('.progress');
+    const numberDisplay = counter.querySelector('.number');
+    const radius = 60;
+    const circumference = 2 * Math.PI * radius;
+    let current = 0;
+
+    progressCircle.style.strokeDasharray = circumference;
+
+    const animate = setInterval(() => {
+      if (current <= value) {
+        const offset = circumference - (current / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        numberDisplay.textContent = value > 100 ? `${current}+` : `${current}%`;
+        current++;
+      } else {
+        clearInterval(animate);
+      }
+    }, 20);
+  });
+}
+
+let animated = false;
+window.addEventListener('scroll', () => {
+  const section = document.getElementById('impact');
+  const position = section.getBoundingClientRect().top;
+
+  if (position < window.innerHeight && !animated) {
+    animateCounters();
+    animated = true;
+  }
+});
+</script>
+
+<!-- team section -->
+<section class="team_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2 class="">
+        Our Team
+      </h2>
+    </div>
+
+    <div class="team_container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/team-1.jpg" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Joseph Brown
+              </h5>
+              <p>
+                Marketing Head
+              </p>
+            </div>
+            <div class="social_box">
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/team-4.jpg" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Josephine Allard
+              </h5>
+              <p>
+                Marketing Head
+              </p>
+            </div>
+            <div class="social_box">
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end team section -->
 
   <!-- info section -->
 <!-- Information Section -->
